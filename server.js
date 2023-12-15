@@ -2,6 +2,9 @@ const express = require('express')
 const app = express()
 const pokemon = require('./models/pokemon')
 
+app.set('view engine', 'jsx')
+app.engine('jsx', require('express-react-views').createEngine())
+// app.use(express.urlencoded({extended:false}))
 
 app.get('/', (req, res)=>{
     res.send('Welcome to the Pokemon App!')
@@ -9,11 +12,8 @@ app.get('/', (req, res)=>{
 
 
 app.get('/pokemon', (req, res)=>{
-    res.send(pokemon)
+    res.render('Index')
 })
-
-
-
 
 
 
