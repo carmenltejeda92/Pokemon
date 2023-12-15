@@ -11,6 +11,9 @@ function Index(props) {
 
   return (
     <>
+        <nav>
+            <a href="/pokemon/new"><h1>Create a New Pokemon</h1></a>
+        </nav>
         <h1 style={myStyle}>See All The Pokemon</h1>
         <ul>
             {props.pokemon.map((pokemon, i)=>{
