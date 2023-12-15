@@ -2,6 +2,10 @@ const express = require('express')
 const app = express()
 
 
+app.get('/', (req, res)=>{
+    res.send('Welcome to the Pokemon App!')
+})
+
 
 
 app.get('/pokemon', (req, res)=>{
@@ -24,5 +28,5 @@ app.get('/pokemon', (req, res)=>{
 
 
 app.listen(3000, ()=>{
-    console.log('listening ...')
+    console.log('listening ..')
 })
